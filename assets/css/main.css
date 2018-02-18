@@ -1,0 +1,23 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Source Sans Pro";
+}
+:root {
+	--main: #2188ff;
+	--dark: #2155ff;
+
+	--light1: #eee;
+	--light2: #dedede;
+	
+	--errorbg: #ffdce0;
+	--errorcolor: #86181d;
+}
+::selection {
+	color: white;
+	background-color: var(--main);
+}
+
+body{
+	background-color: var(--light1);
+}
