@@ -26,4 +26,3 @@ if(currentPage == "signup"){
 }
 
 // Sign in and sign up functionality
-
