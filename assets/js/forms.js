@@ -21,8 +21,40 @@ if(currentPage == "signup"){
 	$("h2").html("<br>Sign Up For <a href='index.html'>HW Organizer Pro</a>");
 	$("form input[type='button']").attr("value","Sign In");
 	$("form input[type='button']").attr("onclick",'window.open("index.html","_self")');
-	document.querySelector("form input[type='password']").outerHTML = ('<input type="password" placeholder="Password:"><input type="password" placeholder="Confirm Password:">');
+	$("form input[type='password']")[0].outerHTML = ('<input type="password" placeholder="Password:"><input type="password" placeholder="Confirm Password:">');
 	$("form input[type='submit']").attr("value","Sign Up");
 }
 
 // Sign in and sign up functionality
+
+// Validate password function
+function validatePassword(){
+	// This function returns an array - array[0] is boolean for if is valid, array[1] is error message if password isn't valid
+
+	// if in Signup Page
+	if(currentPage == "signup"){		
+		// Check if both password fields' values match
+		if($("form input[type='password']:eq(0)").val() != $("form input[type='password']:eq(1)").val()){
+			return [false,"Passwords Do Not Match"];
+		}
+	}
+
+	// Check if email is an ASL email
+	if($("form input[type='text']:eq(0)").val().endsWith("@asl.org") == false){
+		return [false,"Please use an ASL email"];
+	}
+
+	return [true];
+}
+
+// Form has been submitted
+$("form").on("submit",function(item,index){
+	// Differentiate between signup and signin actions
+	if(currentPage == "signup"){
+		// Sign user up if no error
+
+	}else{
+		// Sign in user if no error
+
+	}
+});
