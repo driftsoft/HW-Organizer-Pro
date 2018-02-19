@@ -1,29 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!-- Viewport and charset Meta tags -->
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<!-- Favicon and CSS Links -->
 	<link rel="icon" type="image/ico" href="favicon.ico">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/forms.css">
 
+	<!-- Page Title -->
 	<title>HW Organizer Pro</title>
-
+	
+	<!-- Fonts: Source Sans Pro Via Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900" rel="stylesheet">
 </head>
 <body>
 	<h2><br>Sign In To <a href='index.html'>HW Organizer Pro</a></h2>
+	
+	<!-- Main Sign In and Sign Up Form (Small Changes for Sign Up in forms.js) -->
 	<form>
+		<!-- Error Dialogue -->
 		<h3 style='display: none;'>Invalid Username or Password</h3>
+		
+		<!-- Other Page (if signup link to signin), (if signin link to signup) -->
 		<input type='button' value='Sign Up' onclick='window.open("index.html?signup","_self")'>
 		<hr>
+
+		<!-- Email and Password Authentication -->
 		<input type='text' placeholder="Email:">
 		<input type='password' placeholder="Password:">
+
+		<!-- Submit form Button - Sign In/Sign Up Button -->
 		<input type='submit' value='Sign In'>
 	</form>
 </body>
 
+<!-- jQuery and Firebase Links -->
 <script src='assets/js/jquery.min.js'></script>
+
+<!-- script.js (main js file) and forms.js (js file just for this page) links -->
 <script src='assets/js/script.js'></script>
 <script src='assets/js/forms.js'></script>

@@ -24,3 +24,6 @@ if(currentPage == "signup"){
 	document.querySelector("form input[type='password']").outerHTML = ('<input type="password" placeholder="Password:"><input type="password" placeholder="Confirm Password:">');
 	$("form input[type='submit']").attr("value","Sign Up");
 }
+
+// Sign in and sign up functionality
+
