@@ -31,8 +31,7 @@ if(currentPage == "signup"){
 function validatePassword(){
 	// This function returns an array - array[0] is boolean for if is valid, array[1] is error message if password isn't valid
 
-	
-	// Check if email is an ASL email
+	// Check if email is an Google email
 	if($("form input[type='text']:eq(0)").val().endsWith("@gmail.com") == false){
 		return [false,"Invalid Email"];
 	}
