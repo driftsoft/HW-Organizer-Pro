@@ -37,11 +37,6 @@ function validatePassword(){
 		return [false,"Please use a Gmail email"];
 	}
 
-	// Check if email contains a space or period at beginning (thus, must be invalid)
-	if($("form input[type='text']:eq(0)").val().indexOf(" ")!=-1 || $("form input[type='text']:eq(0)").val()[0]=="."){
-		return [false,"Please use a valid email"];
-	}
-
 	// if in Signup Page
 	if(currentPage == "signup"){		
 		// Check if both password fields' values match
@@ -73,8 +68,28 @@ $("form").on("submit",function(event){
 
 		// Differentiate between signup and signin actions
 		if(currentPage == "signup"){
-			// Sign user up if no error
+			// Sign user up!
 
+			firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(email, password).catch(function(error) {
+				// Error with user sign up
+
+				var errorCode = error.code;
+				
+				if (errorCode == 'auth/email-already-in-use') {
+					formError("Email Already in Use");
+				}
+				if (errorCode == 'auth/invalid-email') {
+					formError("Please use a Valid Email");
+				}
+				if (errorCode == 'auth/operation-not-allowed') {
+					formError("Server Error: Check Back Later");
+				}
+				if (errorCode == 'auth/weak-password') {
+					formError("Please use a Strong Password");
+				}
+
+				console.log(error);
+			});
 		}else{
 			// Sign user in if no error
 			
