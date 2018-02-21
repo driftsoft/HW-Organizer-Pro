@@ -34,7 +34,7 @@ function validatePassword(){
 	
 	// Check if email is an ASL email
 	if($("form input[type='text']:eq(0)").val().endsWith("@gmail.com") == false){
-		return [false,"Please use a Gmail email"];
+		return [false,"Invalid Email"];
 	}
 
 	// if in Signup Page
@@ -85,13 +85,13 @@ $("form").on("submit",function(event){
 					formError("Email Already in Use");
 				}
 				if(errorCode == 'auth/invalid-email'){
-					formError("Please use a Valid Email");
+					formError("Invalid Email");
 				}
 				if(errorCode == 'auth/operation-not-allowed'){
-					formError("Server Error: Check Back Later");
+					formError("Server Error");
 				}
 				if(errorCode == 'auth/weak-password'){
-					formError("Please use a Strong Password");
+					formError("Weak Password");
 				}
 
 				// Log error to console (for debugging purposes)
@@ -104,10 +104,10 @@ $("form").on("submit",function(event){
 				var errorCode = error.code;
 				
 				if(errorCode == 'auth/invalid-email'){
-					formError("Please use a Valid Email");
+					formError("Invalid Email");
 				}
 				if(errorCode == 'auth/user-disabled'){
-					formError("Your Account has Been Disabled");
+					formError("Account Disabled");
 				}
 				if(errorCode == 'auth/user-not-found'){
 					formError("No Account with This Email");
