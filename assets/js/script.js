@@ -14,3 +14,18 @@ var config = {
 	messagingSenderId: "258649066670"
 };
 firebase.initializeApp(config);
+
+// If User Signed In, or Signed Out, trigger url change
+firebase.auth().onAuthStateChanged(function(user) {
+	if(user){
+		// User is signed in (this is saved - remember me is auto-enabled)
+
+		// open main.html in current tab
+		window.open("main.html","_self");
+	}else{
+		// User is not signed in (signed out)
+
+		// open index.html in current tab
+		window.open("index.html","_self");
+	}
+});
