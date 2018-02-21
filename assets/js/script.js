@@ -20,12 +20,20 @@ firebase.auth().onAuthStateChanged(function(user) {
 	if(user){
 		// User is signed in (this is saved - remember me is auto-enabled)
 
-		// open main.html in current tab
-		window.open("main.html","_self");
+		// open main.html in current tab if not already in it
+
+		// uses currentHTMLPage variable defined in HTML file
+		if(currentHTMLPage != "main.html"){
+			window.open("main.html","_self");
+		}
 	}else{
 		// User is not signed in (signed out)
 
-		// open index.html in current tab
-		window.open("index.html","_self");
+		// open index.html in current tab if not already in it
+
+		// uses currentHTMLPage variable defined in HTML file
+		if(currentHTMLPage != "index.html"){
+			window.open("index.html","_self");
+		}
 	}
 });
