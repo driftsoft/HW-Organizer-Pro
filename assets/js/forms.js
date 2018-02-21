@@ -120,3 +120,16 @@ $("form").on("submit",function(event){
 		formError(validatePassword()[1]);
 	}
 });
+
+// When press enter key in email input box, focus password input box rather than submitting
+
+$("form input[type='text']").on("keydown",function(event){
+	// If keycode is 13 - 13 is the keycode for the enter key
+	// Also, it will only work on sign in pages
+	if(event.keyCode == 13 && currentPage != "signup"){
+		// Prevent form submission
+		event.preventDefault();
+
+		$("form input[type='password']:eq(0)").focus();
+	}
+});
