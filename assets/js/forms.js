@@ -52,29 +52,33 @@ function validatePassword(){
 	return [true];
 }
 
+// Add Error Function
+function formError(msg){
+	// This function shows the error dialogue with the msg variable as its text
+
+	$("form h3").removeAttr("style");
+	$("form h3").text(msg);
+}
+
 // Form has been submitted
 $("form").on("submit",function(event){
 
 	event.preventDefault();
 
-	// Differentiate between signup and signin actions
-	if(currentPage == "signup"){
-		// Sign user up if no error
-		if(validatePassword()[0]==true){
-			// No error
+	// Check for any viewable errors
+
+	if(validatePassword()[0]==true){
+		// No error
+
+		// Differentiate between signup and signin actions
+		if(currentPage == "signup"){
+			// Sign user up if no error
+
 		}else{
-			// Error - Show error Message
-			$("form h3").removeAttr("style");
-			$("form h3").text(validatePassword()[1]);
+			// Sign user in if no error
+			
 		}
 	}else{
-		// Sign in user if no error
-		if(validatePassword()[0]==true){
-			// No error
-		}else{
-			// Error - Show error Message
-			$("form h3").removeAttr("style");
-			$("form h3").text(validatePassword()[1]);
-		}
+		formError(validatePassword()[1]);
 	}
 });
