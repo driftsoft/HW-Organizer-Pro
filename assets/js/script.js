@@ -6,11 +6,11 @@
 
 // Initialize Firebase
 var config = {
-	apiKey: "AIzaSyD-irB6ch_EKAgyasvrWzSJ76redQIPXAA",
-	authDomain: "hw-organizer-pro.firebaseapp.com",
-	databaseURL: "https://hw-organizer-pro.firebaseio.com",
-	projectId: "hw-organizer-pro",
-	storageBucket: "hw-organizer-pro.appspot.com",
-	messagingSenderId: "506440532030"
+	apiKey: "AIzaSyCII4B0EycHZ-vbfdsXZaw7UMWdxvRZ_GU",
+	authDomain: "hw-organizer-pro-a7c04.firebaseapp.com",
+	databaseURL: "https://hw-organizer-pro-a7c04.firebaseio.com",
+	projectId: "hw-organizer-pro-a7c04",
+	storageBucket: "hw-organizer-pro-a7c04.appspot.com",
+	messagingSenderId: "258649066670"
 };
 firebase.initializeApp(config);

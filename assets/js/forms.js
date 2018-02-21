@@ -66,6 +66,10 @@ $("form").on("submit",function(event){
 	if(validatePassword()[0]==true){
 		// No error
 
+		// Create Email and Password variabled corresponding to the input box values
+		var email = $("form input[type='text']:eq(0)").val();
+		var password = $("form input[type='password']:eq(0)").val();
+
 		// Differentiate between signup and signin actions
 		if(currentPage == "signup"){
 			// Sign user up!
@@ -73,26 +77,45 @@ $("form").on("submit",function(event){
 			firebase.auth().createUserAndRetrieveDataWithEmailAndPassword(email, password).catch(function(error) {
 				// Error with user sign up
 
+				// Create Variable for Error Code
 				var errorCode = error.code;
 				
-				if (errorCode == 'auth/email-already-in-use') {
+				// Show error message for error codes
+				if(errorCode == 'auth/email-already-in-use'){
 					formError("Email Already in Use");
 				}
-				if (errorCode == 'auth/invalid-email') {
+				if(errorCode == 'auth/invalid-email'){
 					formError("Please use a Valid Email");
 				}
-				if (errorCode == 'auth/operation-not-allowed') {
+				if(errorCode == 'auth/operation-not-allowed'){
 					formError("Server Error: Check Back Later");
 				}
-				if (errorCode == 'auth/weak-password') {
+				if(errorCode == 'auth/weak-password'){
 					formError("Please use a Strong Password");
 				}
 
+				// Log error to console (for debugging purposes)
 				console.log(error);
 			});
 		}else{
 			// Sign user in if no error
-			
+			firebase.auth().signInAndRetrieveDataWithEmailAndPassword(email, password).catch(function(error) {
+				// Handle Errors here.
+				var errorCode = error.code;
+				
+				if(errorCode == 'auth/invalid-email'){
+					formError("Please use a Valid Email");
+				}
+				if(errorCode == 'auth/user-disabled'){
+					formError("Your Account has Been Disabled");
+				}
+				if(errorCode == 'auth/user-not-found'){
+					formError("No Account with This Email");
+				}
+				if(errorCode == 'auth/wrong-password'){
+					formError("Incorrect Password");
+				}
+			});
 		}
 	}else{
 		formError(validatePassword()[1]);
