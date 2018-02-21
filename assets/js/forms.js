@@ -40,8 +40,13 @@ function validatePassword(){
 	}
 
 	// Check if email is an ASL email
-	if($("form input[type='text']:eq(0)").val().endsWith("@google.com") == false){
-		return [false,"Please use a Google email"];
+	if($("form input[type='text']:eq(0)").val().endsWith("@gmail.com") == false){
+		return [false,"Please use a Gmail email"];
+	}
+
+	// Check if email contains a space (thus, must be invalid)
+	if($("form input[type='text']:eq(0)").val().indexOf(" ")!=-1){
+		return [false,"Please use a valid email"];
 	}
 
 	return [true];
