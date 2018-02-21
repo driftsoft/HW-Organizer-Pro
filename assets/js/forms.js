@@ -31,22 +31,23 @@ if(currentPage == "signup"){
 function validatePassword(){
 	// This function returns an array - array[0] is boolean for if is valid, array[1] is error message if password isn't valid
 
+	
+	// Check if email is an ASL email
+	if($("form input[type='text']:eq(0)").val().endsWith("@gmail.com") == false){
+		return [false,"Please use a Gmail email"];
+	}
+
+	// Check if email contains a space or period at beginning (thus, must be invalid)
+	if($("form input[type='text']:eq(0)").val().indexOf(" ")!=-1 || $("form input[type='text']:eq(0)").val()[0]=="."){
+		return [false,"Please use a valid email"];
+	}
+
 	// if in Signup Page
 	if(currentPage == "signup"){		
 		// Check if both password fields' values match
 		if($("form input[type='password']:eq(0)").val() != $("form input[type='password']:eq(1)").val()){
 			return [false,"Passwords Do Not Match"];
 		}
-	}
-
-	// Check if email is an ASL email
-	if($("form input[type='text']:eq(0)").val().endsWith("@gmail.com") == false){
-		return [false,"Please use a Gmail email"];
-	}
-
-	// Check if email contains a space (thus, must be invalid)
-	if($("form input[type='text']:eq(0)").val().indexOf(" ")!=-1){
-		return [false,"Please use a valid email"];
 	}
 
 	return [true];
