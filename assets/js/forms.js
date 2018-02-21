@@ -40,21 +40,36 @@ function validatePassword(){
 	}
 
 	// Check if email is an ASL email
-	if($("form input[type='text']:eq(0)").val().endsWith("@asl.org") == false){
-		return [false,"Please use an ASL email"];
+	if($("form input[type='text']:eq(0)").val().endsWith("@google.com") == false){
+		return [false,"Please use a Google email"];
 	}
 
 	return [true];
 }
 
 // Form has been submitted
-$("form").on("submit",function(item,index){
+$("form").on("submit",function(event){
+
+	event.preventDefault();
+
 	// Differentiate between signup and signin actions
 	if(currentPage == "signup"){
 		// Sign user up if no error
-
+		if(validatePassword()[0]==true){
+			// No error
+		}else{
+			// Error - Show error Message
+			$("form h3").removeAttr("style");
+			$("form h3").text(validatePassword()[1]);
+		}
 	}else{
 		// Sign in user if no error
-
+		if(validatePassword()[0]==true){
+			// No error
+		}else{
+			// Error - Show error Message
+			$("form h3").removeAttr("style");
+			$("form h3").text(validatePassword()[1]);
+		}
 	}
 });
