@@ -132,3 +132,17 @@ $("form input[type='text']:eq(0)").on("keydown",function(event){
 		$("form input[type='password']:eq(0)").focus();
 	}
 });
+
+// When press enter key in first password box in sign up page, focus next password box
+
+if(currentPage == "signup"){
+	$("form input[type='password']:eq(0)").on("keydown",function(event){
+		// If keycode is 13 - 13 is the keycode for the enter key
+		if(event.keyCode == 13){
+			// Prevent form submission
+			event.preventDefault();
+
+			$("form input[type='password']:eq(1)").focus();
+		}
+	});
+}
