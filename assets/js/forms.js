@@ -31,6 +31,16 @@ if(currentPage == "signup"){
 function validatePassword(){
 	// This function returns an array - array[0] is boolean for if is valid, array[1] is error message if password isn't valid
 
+	// Check if connected to internet
+	if(!navigator.onLine){
+		return [false,"No Connection"];
+	}
+
+	// Check if firebase exists, if not server error
+	if(typeof firebase == 'undefined'){
+		return [false,"Server Error"];
+	}
+
 	// Check if email is an Google email
 	if($("form input[type='text']:eq(0)").val().endsWith("@gmail.com") == false){
 		return [false,"Invalid Email"];
@@ -61,7 +71,6 @@ $("form").on("submit",function(event){
 	event.preventDefault();
 
 	// Check for any viewable errors
-
 	if(validatePassword()[0]==true){
 		// No error
 
