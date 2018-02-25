@@ -22,6 +22,7 @@ button {
 	border: none;
 	background-color: var(--main);
 	color: white;
+	cursor: pointer;
 }
 
 .container div.top {
@@ -43,5 +44,4 @@ button {
 }
 button:hover{
 	background-color: var(--dark);
-	cursor: pointer;
 }
