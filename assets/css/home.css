@@ -5,7 +5,7 @@
 	border-top: none;
 	border-bottom: none;
 	padding: 24px;
-	margin: 0 calc((100vw - 760px)/2);
+	margin: 0 calc((100% - 760px)/2);
 	height: 100vh;
 	background-color: white;
 }
