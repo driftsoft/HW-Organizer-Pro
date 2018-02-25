@@ -15,3 +15,30 @@
 	width: 100%;
 	display: block;
 }
+.container div.top h1 {
+	float: left;
+	line-height: 7.5vh;
+	font-size: 5vh;
+	padding: 0 1.25vh;
+}
+.container div.top button {
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+	padding: 0 12px;
+	border: 2px solid var(--light2);
+	border-radius: 5px;
+	margin: 4px 0;
+	outline: none;
+	font-size: 20px;
+	border: none;
+	background-color: var(--main);
+	color: white;
+	float: right;
+	height: 7.5vh;
+	line-height: 7.5vh;
+}
+.container div.top button:hover{
+	background-color: var(--dark);
+	cursor: pointer;
+}
