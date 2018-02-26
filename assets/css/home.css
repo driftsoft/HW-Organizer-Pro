@@ -62,3 +62,10 @@ button:hover{
 .container div.toolbar button:hover{
 	background-color: var(--light2);
 }
+.container div.toolbar button.sort {
+	width: auto;
+	padding: 0 12px;
+	border-radius: 5px;
+	color: #555;
+	font-weight: 600;
+}
