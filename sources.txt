@@ -1,0 +1,13 @@
+=== HW Organizer Pro Sources ===
+
+Main developer and Founder of HW Organizer Pro: Fred Adams
+
+Favicon and Logo created by Fred Adams.
+
+All HTML, CSS and JS Created By Fred Adams.
+
+jQuery 3.3.1 (jquery.min.js) created by the jQuery Foundation: https://code.jquery.com/jquery-3.3.1.min.js
+
+Images used:
+
+View 6 created by Iconmonstr: https://iconmonstr.com/view-6-png/
