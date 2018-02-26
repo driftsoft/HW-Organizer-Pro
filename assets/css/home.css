@@ -73,3 +73,10 @@ button:hover{
 	color: #555;
 	font-weight: 600;
 }
+
+.container div.toolbar button.add {
+	background-image: url(../img/addtask.png);
+}
+.container div.toolbar button.view {
+	background-image: url(../img/blockview.png);
+}
