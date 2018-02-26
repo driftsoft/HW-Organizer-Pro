@@ -58,6 +58,10 @@ button:hover{
 	width: 7.5vh;
 	border-radius: 50%;
 	background-color: transparent;
+	background-size: 3.5vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding: 0;
 }
 .container div.toolbar button:hover{
 	background-color: var(--light2);
