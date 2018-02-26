@@ -70,7 +70,7 @@ a:hover{
 form hr {
 	width: 80%;
 	height: 2px;
-	background-color: #bbb;
+	background-color: var(--light3);
 	border: none;
     margin: 3vh 10%;
 }
