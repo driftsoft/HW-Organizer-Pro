@@ -86,3 +86,10 @@ button:hover{
 .container div.toolbar button.view {
 	background-image: url(../img/blockview.png);
 }
+.container div.toolbar button.settings {
+	background-image: url(../img/settings.png);
+}
+
+.container div.toolbar button.view.blockView {
+	background-image: url(../img/listview.png);
+}
