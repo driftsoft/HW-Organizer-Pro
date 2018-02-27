@@ -15,7 +15,6 @@ button {
 	padding: 12px;
 	border: 2px solid var(--light2);
 	border-radius: 5px;
-	margin: 4px 0;
 	outline: none;
 	font-size: 20px;
 	border: none;
@@ -32,11 +31,18 @@ button:hover{
 	width: 100%;
 	display: block;
 }
-.container div.top h1 {
+.container div.top a {
 	float: left;
+	display: block;
+	text-decoration: none;
+	font-weight: bold;
 	line-height: 7.5vh;
 	font-size: 5vh;
-	padding: 0 1.25vh;
+	padding: 0 2.5vh;
+	color: var(--main);
+}
+.container div.top a:hover{
+	color: var(--dark);
 }
 .container div.top button {
 	float: right;
