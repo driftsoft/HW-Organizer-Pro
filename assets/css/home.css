@@ -131,7 +131,7 @@ button:hover{
 	float: left;
 	cursor: pointer;
 }
-#tasks div span:hover{
+#tasks div span:not(.done):hover{
 	background-image: url(../img/doneHover.png);
 }
 #tasks div span:active,#tasks div span.done{
