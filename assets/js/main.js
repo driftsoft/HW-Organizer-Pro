@@ -15,3 +15,11 @@ $(".container div.toolbar button.sort").on("click",function(){
 $(".container div.toolbar button.view").on("click",function(){
 	$(this).toggleClass("blockView");
 });
+
+$("#tasks div").on("click",function(){
+	$(".selected").removeClass("selected");
+	$(this).addClass("selected");
+});
+$("#tasks div").on("dblclick",function(){
+	// open task!
+});
