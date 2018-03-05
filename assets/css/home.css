@@ -115,6 +115,7 @@ button:hover{
 	float: left;
 	font-size: 3vh;
 	color: #555;
+	user-select: none;
 }
 #tasks div h1 {
 	width: calc(60% - (5vh + 24px));
