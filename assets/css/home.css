@@ -98,6 +98,9 @@ button:hover{
 	background-image: url(../img/listview.png);
 }
 
+#tasks {
+	padding: 2.5vh 0;
+}
 #tasks div {
 	display: block;
 	width: 100%;
