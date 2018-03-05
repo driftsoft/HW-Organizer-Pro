@@ -23,3 +23,6 @@ $("#tasks div").on("click",function(){
 $("#tasks div").on("dblclick",function(){
 	// open task!
 });
+$("#tasks div span").on("click",function(){
+	$(this).toggleClass("done");
+});
