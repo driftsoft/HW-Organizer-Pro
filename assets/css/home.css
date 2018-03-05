@@ -109,12 +109,16 @@ button:hover{
 	box-sizing: border-box;
 	padding: 12px;
 	line-height: 5vh;
+	color: #555;
+}
+#tasks div.selected {
+	background-color: var(--main);
+	color: white;
 }
 #tasks div h1,#tasks p {
 	display: block;
 	float: left;
 	font-size: 3vh;
-	color: #555;
 	user-select: none;
 }
 #tasks div h1 {
