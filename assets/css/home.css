@@ -134,6 +134,9 @@ button:hover{
 #tasks div span:hover{
 	background-image: url(../img/doneHover.png);
 }
+#tasks div span:active,#tasks div span.done{
+	background-image: url(../img/doneSolid.png);
+}
 #tasks div p {
 	width: 20%;
 }
