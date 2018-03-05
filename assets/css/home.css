@@ -100,5 +100,14 @@ button:hover{
 
 #tasks div {
 	display: block;
+	width: 100%;
+	height: calc(10vh + 24px);
 	border-bottom: 1px solid var(--light1);
+	box-sizing: border-box;
+	padding: 12px;
+	line-height: 10vh;
+}
+#tasks h1,#tasks p {
+	display: block;
+	float: left;
 }
