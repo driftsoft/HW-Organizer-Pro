@@ -100,6 +100,9 @@ button:hover{
 
 #tasks {
 	padding: 2.5vh 0;
+	box-sizing: border-box;
+	min-height: 75vh;
+	overflow-y: scroll;
 }
 #tasks div {
 	display: block;

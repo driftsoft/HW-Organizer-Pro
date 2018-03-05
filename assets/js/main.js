@@ -29,3 +29,9 @@ $("#tasks div").on("dblclick",function(){
 $("#tasks div span").on("click",function(){
 	$(this).toggleClass("done");
 });
+
+$("#tasks").on("click",function(e){
+	if(e.target.parentElement != $("#tasks")[0] && e.target.parentElement.parentElement != $("#tasks")[0]){
+		$(".selected").removeClass("selected");
+	}
+});
