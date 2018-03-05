@@ -129,6 +129,10 @@ button:hover{
 	background-position: center;
 	background-repeat: no-repeat;
 	float: left;
+	cursor: pointer;
+}
+#tasks div span:hover{
+	background-image: url(../img/doneHover.png);
 }
 #tasks div p {
 	width: 20%;
