@@ -129,7 +129,8 @@ button:hover{
 	width: calc(5vh + 24px);
 	display: block;
 	height: 100%;
-	background-image: linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url(../img/doneHover.png);
+	opacity: 0.6;
+	background-image: url(../img/doneHover.png);
 	background-size: contain;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -137,9 +138,11 @@ button:hover{
 	cursor: pointer;
 }
 #tasks div span:not(.done):hover{
+	opacity: 1;
 	background-image: url(../img/doneHover.png);
 }
 #tasks div span:active,#tasks div span.done{
+	opacity: 1;
 	background-image: url(../img/doneSolid.png);
 }
 #tasks div p {

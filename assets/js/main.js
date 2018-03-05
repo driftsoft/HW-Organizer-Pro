@@ -16,9 +16,12 @@ $(".container div.toolbar button.view").on("click",function(){
 	$(this).toggleClass("blockView");
 });
 
-$("#tasks div").on("click",function(){
-	$(".selected").removeClass("selected");
-	$(this).addClass("selected");
+$("#tasks div").on("mousedown",function(e){
+	console.log(e.target.tagName);
+	if(e.target.tagName != "SPAN"){
+		$(".selected").removeClass("selected");
+		$(this).addClass("selected");
+	}
 });
 $("#tasks div").on("dblclick",function(){
 	// open task!
