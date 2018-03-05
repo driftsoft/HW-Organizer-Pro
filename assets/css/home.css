@@ -97,3 +97,8 @@ button:hover{
 .container div.toolbar button.view.blockView {
 	background-image: url(../img/listview.png);
 }
+
+#tasks div {
+	display: block;
+	border-bottom: 1px solid var(--light1);
+}
