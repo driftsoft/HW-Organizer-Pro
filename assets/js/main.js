@@ -23,7 +23,7 @@ $("#tasks div").on("mousedown",function(e){
 	}
 });
 $("#tasks div").on("dblclick",function(){
-	// open task!
+	openTask();
 });
 $("#tasks div span").on("click",function(){
 	$(this).toggleClass("done");
@@ -65,3 +65,7 @@ $(document).on("keydown",function(e){
 		}
 	}
 });
+
+function openTask(){
+	// Open Selected Task: One of the Main Functions in HWOP's JS
+}
