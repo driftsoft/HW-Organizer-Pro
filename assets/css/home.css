@@ -144,6 +144,12 @@ button:hover{
 	opacity: 1;
 	background-image: url(../img/doneHover.png);
 }
+#tasks div.selected span:not(.done):hover,#tasks div.selected span:not(.done){
+	background-image: url(../img/doneHoverSelected.png);
+}
+#tasks div.selected span:active,#tasks div.selected span.done{
+	background-image: url(../img/doneSolidSelected.png);
+}
 #tasks div span:active,#tasks div span.done{
 	opacity: 1;
 	background-image: url(../img/doneSolid.png);
