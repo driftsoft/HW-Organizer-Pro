@@ -54,6 +54,9 @@ $(document).on("keydown",function(e){
 			if($("#tasks").scrollTop() + ($(window).height()*0.8) < $(".selected").position().top + $("#tasks").scrollTop() + 24 - ($(window).height()*0.15)){
 				$("#tasks").scrollTop((($("#tasks div").index($(".selected")) + 2)*(($(window).height()*0.05 + 24))) - ($(window).height()*0.8));
 			}
+			if($("#tasks").scrollTop() > $(".selected").position().top + $("#tasks").scrollTop() - ($(window).height()*0.2)){
+				$("#tasks").scrollTop((($("#tasks div").index($(".selected")) + 2)*(($(window).height()*0.05 + 24))) - ($(window).height()*0.15));
+			}
 		}
 	}
 });
