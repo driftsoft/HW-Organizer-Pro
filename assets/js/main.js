@@ -58,5 +58,10 @@ $(document).on("keydown",function(e){
 				$("#tasks").scrollTop((($("#tasks div").index($(".selected")) + 2)*(($(window).height()*0.05 + 24))) - ($(window).height()*0.15));
 			}
 		}
+
+		if(e.keyCode == 13){
+			e.preventDefault();
+			openTask();
+		}
 	}
 });
