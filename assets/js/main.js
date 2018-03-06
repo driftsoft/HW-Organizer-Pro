@@ -17,7 +17,6 @@ $(".container div.toolbar button.view").on("click",function(){
 });
 
 $("#tasks div").on("mousedown",function(e){
-	console.log(e.target.tagName);
 	if(e.target.tagName != "SPAN"){
 		$(".selected").removeClass("selected");
 		$(this).addClass("selected");
@@ -50,6 +49,10 @@ $(document).on("keydown",function(e){
 			if(eq > -1 && eq < $("#tasks div").length){
 				$(".selected").removeClass("selected");
 				$("#tasks div:eq(" + eq.toString() + ")").addClass("selected");
+			}
+			console.log(($(window).height()*0.95) - (24 + $(".selected").position().top));
+			if($("#tasks").scrollTop() + ($(window).height()*0.8) < $(".selected").position().top + $("#tasks").scrollTop() + 24 - ($(window).height()*0.15)){
+				$("#tasks").scrollTop((($("#tasks div").index($(".selected")) + 2)*(($(window).height()*0.05 + 24))) - ($(window).height()*0.8));
 			}
 		}
 	}
