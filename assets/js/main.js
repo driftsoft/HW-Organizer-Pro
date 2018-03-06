@@ -35,3 +35,23 @@ $("#tasks").on("click",function(e){
 		$(".selected").removeClass("selected");
 	}
 });
+
+$(document).on("keydown",function(e){
+	if($(".selected").length){
+		var eq = "testing";
+		if(e.keyCode == 38){
+			eq = ($("#tasks div").index($(".selected")) - 1);
+		}
+		if(e.keyCode == 40){
+			eq = ($("#tasks div").index($(".selected")) + 1);
+		}
+		if(eq != "testing"){
+			event.preventDefault();
+			console.log(eq);
+			if(eq > -1 && eq < $("#tasks div").length){
+				$(".selected").removeClass("selected");
+				$("#tasks div:eq(" + eq.toString() + ")").addClass("selected");
+			}
+		}
+	}
+});
