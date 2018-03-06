@@ -47,7 +47,6 @@ $(document).on("keydown",function(e){
 		}
 		if(eq != "testing"){
 			event.preventDefault();
-			console.log(eq);
 			if(eq > -1 && eq < $("#tasks div").length){
 				$(".selected").removeClass("selected");
 				$("#tasks div:eq(" + eq.toString() + ")").addClass("selected");
