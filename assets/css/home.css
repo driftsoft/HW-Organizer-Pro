@@ -121,7 +121,7 @@ button:hover{
 #tasks div h1,#tasks p {
 	display: block;
 	float: left;
-	font-size: 3vh;
+	font-size: 20px;
 	user-select: none;
 }
 #tasks div h1 {
