@@ -75,7 +75,7 @@ button:hover{
 }
 .container div.toolbar button.sort,.container div.toolbar button.show {
 	width: auto;
-	padding: 0 16px;
+	padding: 0 2.5vh;
 	border-radius: 5px;
 	color: #555;
 	font-weight: 600;
